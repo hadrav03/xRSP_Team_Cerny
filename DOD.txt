@@ -1,4 +1,4 @@
-1)Existuje Implenetace
+1)Existuje Implementace
 2)Otestováno
 3)Review
 4)Běží na serveru bez problémů
