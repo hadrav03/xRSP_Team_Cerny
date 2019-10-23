@@ -1,0 +1,5 @@
+1)Existuje Implenetace
+2)Otestováno
+3)Review
+4)Běží na serveru bez problémů
+5)Akceptováno Product Ownerem
