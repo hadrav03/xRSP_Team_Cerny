@@ -1,0 +1,5 @@
+1. Specifikace požadavků od klienta
+2. Musí existovat kritéria přijetí a tým jim musí rozumět
+3. Odhadnutí příběhu týmem
+4. Existují UX(UI) návrhy
+5. Tým rozumí jak bude fungovat aplikace
