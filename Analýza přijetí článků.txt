@@ -1,0 +1,12 @@
+Rozvržení analýzy 
+
+Webové rozhraní:
+- Po odeslání článku autorem se objeví daný článek v rubrice na schvalování článků u redaktora, kde budou všechny potřebné informace
+- U článku bude moct redaktor zamítnout článek, dát k formálnímu doplnění, odeslat do recenzního řízení
+
+
+- Jestliže dojde k přijetí článků, redaktor bude moct zvolit recenzenta a tím bude autor článku obeznámen, také zvolí termín
+
+
+Databáze
+- u článků se bude evidovat jejich stav
