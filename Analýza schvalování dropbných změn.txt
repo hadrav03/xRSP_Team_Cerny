@@ -1,0 +1,9 @@
+Rozvržení analýzy
+
+
+ Webové rozhraní:
+
+
+
+Redaktor bude moct schvalovat drobné úpravy článků od recenzentů. Buď se zpětně vrátí recenzentům a nebo se schválí. Autor bude o stavu informován prostřednictvím webu.
+Bude tam rubrika na schvalování drobných změn před finální podobnou článků čili tam bude ikonka na přijmutí či odmítnutí. Změny v textu budou vyznačeny.
