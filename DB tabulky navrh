@@ -1,0 +1,31 @@
+Uzivatel{
+	Jmeno,
+	Prijmeni,
+	Login(UNIQUE)
+	Password_Hash
+	Datum registrace
+	role
+	email(UNIQUE)
+	Titul pred jmenem,
+	titul za jmenem
+}
+Clanek{
+	id_clanek(AUTO_INKREMENT),
+	autor FOREGIN KEY Uzivatel(Login),
+	napsano(Date),
+	Verze(int),
+	nazev_clanku,
+	Text
+}
+Posudek{
+	clanek FOREGIN_KEY Clanek(id_clanek),
+	Text,
+	napsano(Date),
+	hodnotil FOREGIN KEY Uzivatel(Login)
+}
+Stav_clanku{
+	Clanek FOREGIN KEY Clanek(id_clanek),
+	stav(ENUM),
+	datum(Date)
+}
+
