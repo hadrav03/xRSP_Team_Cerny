@@ -1,0 +1,17 @@
+Analýza - seznámení s posudky
+
+V GUI
+- Autor by měl vidět své články (nějaký seznam) a když na nějaký klikne ukáže se mu jeho článek (text) plus pod článkem by měl vidět všechny posudky
+- Zobrazené posudky by měli být seřazené od nejnovějších po nejstarší, popřípadě nějak srovnat podle jmen kdo hodnotil
+- Autor by měl v seznamu svých článku vidět ještě stavy článku
+- Seznam článku by měl obsahovat název, možná nějaký kosuk textu, ale nemuselo by být a hlavně musí obsahovat stav článku
+
+V DB
+- by mělo být posudek id_článku, nějaké id kdo to hodnotil, textová zpráva posudku, datum a čas kdy posudek byl napsán
+- dále v tabulce článku by mělo být uchováno stav článku:
+	- jestli čeká na přečtení redaktorem
+	- čeká na recenzní posudky
+	- zamítnuto
+	- upravit (asi)
+	- vydáno 
+	- ...
