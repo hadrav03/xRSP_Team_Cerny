@@ -1,0 +1,12 @@
+Analýza - Vrácení článků autorovi
+
+V GUI:
+- Redaktor může vrátit článek a nebo dát že je ok (takže nějaký button u článku) 
+- Redaktor by měl vidět všechny články, nějaké rozdělení co už schválil, čeká na schválení (to by měl vidět asi primárně),...
+- Redaktor by měl možnost vidět historii článku zda už byl na schválení nebo ne a zda už u něho není znova
+- Články na schválení by měl redaktor vidět od nejnovějších
+
+V DB:
+- by měla existovat nějaká historie zda je článek schválen popřípadě zda nebyl a byl vrácen a autor ho přepsal a poslal znova na schválení (tohle je na scrumu: Viditelně vrácený článek, jehož kopie respektive kompletní historie existuje v systému.)
+- v historii by mělo být uloženo asi i datum a čas 
+- popřípadě redaktor by k tomu měl mít možnost napsat zprávu, proč článek vrátil nebo zamítl
