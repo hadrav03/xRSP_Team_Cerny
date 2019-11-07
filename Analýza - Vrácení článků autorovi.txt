@@ -5,6 +5,8 @@ V GUI:
 - Redaktor by měl vidět všechny články, nějaké rozdělení co už schválil, čeká na schválení (to by měl vidět asi primárně),...
 - Redaktor by měl možnost vidět historii článku zda už byl na schválení nebo ne a zda už u něho není znova
 - Články na schválení by měl redaktor vidět od nejnovějších
+- Autorovi by měl na hlavní stránce se ukázat, že se mu vrátil článek plus zpráva od redaktora
+- Autor by měl mít možnost článek upravit a poslat znovu na schválení
 
 V DB:
 - by měla existovat nějaká historie zda je článek schválen popřípadě zda nebyl a byl vrácen a autor ho přepsal a poslal znova na schválení (tohle je na scrumu: Viditelně vrácený článek, jehož kopie respektive kompletní historie existuje v systému.)
