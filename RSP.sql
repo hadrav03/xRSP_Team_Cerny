@@ -12,21 +12,33 @@ CREATE TABLE RSP_uzivatel(
 
 CREATE TABLE RSP_clanek(
 	id_clanek int NOT NULL AUTO_INCREMENT,
-	autor varchar(25),
+	autor varchar(25) NOT NULL,
 	datum DATETIME NOT NULL,
 	verze tinyint NOT NULL,
-	nazev_clanku varchar(250) NOT NULL,text TEXT,
+	nazev varchar(250) NOT NULL,
+	soubor varchar(50) NOT NULL,
+	cislo_casopisu tinyint NOT NULL,
 	PRIMARY KEY(id_clanek),
 	CONSTRAINT fk_user FOREIGN KEY (autor) REFERENCES RSP_uzivatel(login) ON UPDATE CASCADE ON DELETE CASCADE
 );
+CREATE TABLE RSP_k_recenzi(
+	recenzent varchar(25) NOT NULL,
+	clanek int NOT NULL,
+	datum DATETIME NOT NULL,
+	CONSTRAINT fk_user2 FOREIGN KEY (recenzent) REFERENCES RSP_uzivatel(login) ON UPDATE CASCADE ON DELETE CASCADE,
+	CONSTRAINT fk_clanek FOREIGN KEY (clanek) REFERENCES RSP_clanek(id_clanek) ON UPDATE CASCADE ON DELETE CASCADE
+);
 
 CREATE TABLE RSP_posudek(
+	id_posudek int NOT NULL AUTO_INCREMENT,	
 	clanek int NOT NULL,
-	text TEXT,
+	text TEXT NOT NULL,
 	datum DATETIME NOT NULL,
-	autor varchar(25) ,
-	CONSTRAINT fk_user2 FOREIGN KEY (autor) REFERENCES RSP_uzivatel(login) ON UPDATE CASCADE ON DELETE CASCADE,
-	CONSTRAINT fk_clanek FOREIGN KEY (clanek) REFERENCES RSP_clanek(id_clanek) ON UPDATE CASCADE ON DELETE CASCADE
+	autor varchar(25) NOT NULL,
+	viditelny BOOLEAN NOT NULL,
+	PRIMARY KEY(id_posudek),
+	CONSTRAINT fk_user3 FOREIGN KEY (autor) REFERENCES RSP_uzivatel(login) ON UPDATE CASCADE ON DELETE CASCADE,
+	CONSTRAINT fk_clanek2 FOREIGN KEY (clanek) REFERENCES RSP_clanek(id_clanek) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
 CREATE TABLE RSP_stav_clanku(
@@ -34,7 +46,13 @@ CREATE TABLE RSP_stav_clanku(
 	stav tinyint NOT NULL,
 	datum DATETIME NOT NULL,
 	PRIMARY KEY(clanek),
-	CONSTRAINT fk_clanek2 FOREIGN KEY (clanek) REFERENCES RSP_clanek(id_clanek) ON UPDATE CASCADE ON DELETE CASCADE
+	CONSTRAINT fk_clanek3 FOREIGN KEY (clanek) REFERENCES RSP_clanek(id_clanek) ON UPDATE CASCADE ON DELETE CASCADE
+);
+CREATE TABLE RSP_oponentni_form(
+	id_posudek int NOT NULL UNIQUE,
+	text TEXT,
+	PRIMARY KEY(id_posudek),
+	CONSTRAINT fk_posudek FOREIGN KEY (id_posudek) REFERENCES RSP_posudek(id_posudek) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
-DROP TABLE IF EXISTS RSP_stav_clanku,RSP_posudek,RSP_clanek,RSP_uzivatel;
+DROP TABLE IF EXISTS RSP_stav_clanku,RSP_posudek,RSP_clanek,RSP_uzivatel,RSP_oponentni_form,RSP_k_recenzi;
