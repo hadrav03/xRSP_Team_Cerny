@@ -7,7 +7,7 @@ CREATE TABLE RSP_uzivatel(
 	heslo_hash varchar(128) NOT NULL,
 	email varchar(100) UNIQUE NOT NULL,
 	registrace DATETIME,
-	PRIMARY KEY(LOGIN)
+	PRIMARY KEY(login)
 );
 
 CREATE TABLE RSP_clanek(
@@ -25,7 +25,7 @@ CREATE TABLE RSP_posudek(
 	text TEXT,
 	datum DATETIME NOT NULL,
 	autor varchar(25) ,
-	CONSTRAINT fk_user FOREIGN KEY (autor) REFERENCES RSP_uzivatel(login) ON UPDATE CASCADE ON DELETE CASCADE,
+	CONSTRAINT fk_user2 FOREIGN KEY (autor) REFERENCES RSP_uzivatel(login) ON UPDATE CASCADE ON DELETE CASCADE,
 	CONSTRAINT fk_clanek FOREIGN KEY (clanek) REFERENCES RSP_clanek(id_clanek) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
@@ -34,7 +34,7 @@ CREATE TABLE RSP_stav_clanku(
 	stav tinyint NOT NULL,
 	datum DATETIME NOT NULL,
 	PRIMARY KEY(clanek),
-	CONSTRAINT fk_clanek FOREIGN KEY (clanek) REFERENCES RSP_clanek(id_clanek) ON UPDATE CASCADE ON DELETE CASCADE
+	CONSTRAINT fk_clanek2 FOREIGN KEY (clanek) REFERENCES RSP_clanek(id_clanek) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
 DROP TABLE IF EXISTS RSP_stav_clanku,RSP_posudek,RSP_clanek,RSP_uzivatel;
