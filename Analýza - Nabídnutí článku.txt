@@ -2,9 +2,9 @@ Analýza - Nabídnutí článku
 
 - Funkčnost přidání článku do databáze
 
-- V GUI by mělo jít zadat název článku, text článku, možná nějaký obrázky (asi)
+- V GUI by mělo jít zadat název článku, přidat text v šabloně 
 - V GUI by si pak autor článku měl zobrazit celý článek a měl by vidět i hodnocení a název kdo hodnotil
 
   V DB:
-- V DB by mělo uchovávat id_autora který napsal článek, id článku, název článu, text článku, možná nějaké obrázky (asi)
+- V DB by mělo uchovávat id_autora který napsal článek, id článku, název článu, soubor s článkem
 - Druhá tabulka by měla uchovávat id_článku (cizí klíč), hodnocení (text), a asi id kdo hodnotil 
