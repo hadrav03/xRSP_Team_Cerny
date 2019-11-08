@@ -38,7 +38,7 @@ CREATE TABLE RSP_posudek(
 	aktualnost tinyint NOT NULL,
 	originalita tinyint NOT NULL,
 	odborna_uroven tinyint NOT NULL,
-	jazyk_uroven tinyint NOT NULL,,
+	jazyk_uroven tinyint NOT NULL,
 	viditelny BOOLEAN NOT NULL,
 	PRIMARY KEY(id_posudek),
 	CONSTRAINT fk_user3 FOREIGN KEY (autor) REFERENCES RSP_uzivatel(login) ON UPDATE CASCADE ON DELETE CASCADE,
